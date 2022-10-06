@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:Gimly-Blockchain/antelope-did.git"
+    "url": "git@github.com/Tonomy-Foundation/antelope-did.git"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

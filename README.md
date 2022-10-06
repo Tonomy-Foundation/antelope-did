@@ -20,7 +20,7 @@ This library is intended to use Antelope accounts as fully self managed [Decentr
 
 It supports the proposed [Decentralized Identifiers](https://w3c-ccg.github.io/did-spec/) spec from the [W3C Credentials Community Group](https://w3c-ccg.github.io).
 
-The DID specification can be found at [antelope-did-spec](https://github.com/Gimly-Blockchain/antelope-did-spec).
+The DID specification can be found at [antelope-did-spec](https://github.com/Tonomy-Foundation/antelope-did-spec).
 
 ## DID Create
 
@@ -78,7 +78,7 @@ const didUpdateResult = await antelopeDID.update('didtester333', 'active', 'owne
 
 ## DID Deactivate
 
-Note: DID Deactive always throws an error as it is not supported by default on an Antelope chain. See the [Antelope DID Spec](https://github.com/Gimly-Blockchain/antelope-did-spec#54-deactivate) for more information.
+Note: DID Deactive always throws an error as it is not supported by default on an Antelope chain. See the [Antelope DID Spec](https://github.com/Tonomy-Foundation/antelope-did-spec#54-deactivate) for more information.
 ```js
 const antelopeDID = new AntelopeDID({
     account: 'didtester333',
@@ -108,14 +108,14 @@ All function calls (create, resolve, update, deactivate) can be called with an o
 }
 ```
 
-**chain** - the chain id or the registered chain name (see the [DID method schema](https://github.com/Gimly-Blockchain/antelope-did-spec#3-did-method-schema-didantelope) part of the Antelope DID spec). This must be provided to know which chain to contact and a corresponding item in the [antelope-did-chain-registry.json](https://github.com/Gimly-Blockchain/antelope-did-resolver/blob/master/src/antelope-did-chain-registry.json) or `registry` property must exist e.g.
+**chain** - the chain id or the registered chain name (see the [DID method schema](https://github.com/Tonomy-Foundation/antelope-did-spec#3-did-method-schema-didantelope) part of the Antelope DID spec). This must be provided to know which chain to contact and a corresponding item in the [antelope-did-chain-registry.json](https://github.com/Tonomy-Foundation/antelope-did-resolver/blob/master/src/antelope-did-chain-registry.json) or `registry` property must exist e.g.
 <br>`eos:testnet:jungle`
 <br>`telos`
 <br>`4667b205c6838ef70ff7988f6e8257e8be0e1284a2f59699054a018f743b1d11`
 <br>**fetch** - fetch object used to communicate with the antelope API. If using nodejs then you need to import the `node-fetch` npm package and use this. See the [eosjs documentation](https://www.npmjs.com/package/eosjs) for more details.
 <br>**signatureProvider** - the SignatureProvider object that will be used to sign txs
 <br>**accountPermission** - the permission name that will be used to send txs
-<br>**registry** - additional ChainRegisries that are used to find the API endpoints of the antelope API. This should be used when communicating with Antelope blockchain nodes that have not been registed in the [antelope-did-chain-registry.json](https://github.com/Gimly-Blockchain/antelope-did-resolver/blob/master/src/antelope-did-chain-registry.json)
+<br>**registry** - additional ChainRegisries that are used to find the API endpoints of the antelope API. This should be used when communicating with Antelope blockchain nodes that have not been registed in the [antelope-did-chain-registry.json](https://github.com/Tonomy-Foundation/antelope-did-resolver/blob/master/src/antelope-did-chain-registry.json)
 <br>**transactionOptions** - overrides the tx options when the tx is sent. See the [eosjs documentation](https://www.npmjs.com/package/eosjs) for more details.
 
 ### Create configuration
