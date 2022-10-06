@@ -1,17 +1,17 @@
 {
-  "name": "eosio-did",
+  "name": "antelope-did",
   "author": "Jack Tanner <jack@gimly.io>",
   "version": "0.1.2",
   "license": "Apache-2.0",
-  "description": "Create, resolve, update and deactivate Decentralized Identifier (DID) documents based on EOSIO blockchains",
+  "description": "Create, resolve, update and deactivate Decentralized Identifier (DID) documents based on Antelope blockchains",
   "keywords": [
-    "eosio",
+    "antelope",
     "did",
     "ssi"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:Gimly-Blockchain/eosio-did.git"
+    "url": "git@github.com:Gimly-Blockchain/antelope-did.git"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -42,14 +42,14 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "module": "dist/eosio-did.esm.js",
+  "module": "dist/antelope-did.esm.js",
   "size-limit": [
     {
-      "path": "dist/eosio-did.cjs.production.min.js",
+      "path": "dist/antelope-did.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/eosio-did.esm.js",
+      "path": "dist/antelope-did.esm.js",
       "limit": "10 KB"
     }
   ],
@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "did-resolver": "^3.1.0",
-    "eosio-did-resolver": "^0.1.4",
+    "antelope-did-resolver": "^0.1.4",
     "eosjs": "^22.0.0",
     "node-fetch": "^2.6.1"
   }

@@ -1,6 +1,6 @@
-import { CreateOptions, EosioOptions } from './types';
+import { CreateOptions, AntelopeOptions } from './types';
 
-export const defaultEosioOptions: Partial<EosioOptions> = {
+export const defaultAntelopeOptions: Partial<AntelopeOptions> = {
   accountPermission: 'active',
   transactionOptions: {
     blocksBehind: 3,

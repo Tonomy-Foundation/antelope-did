@@ -1,10 +1,10 @@
-import EosioDID from '../src';
+import AntelopeDID from '../src';
 import { Authority } from '../src/types';
 import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';
 import jungleTestKeys from '../jungleTestKeys.json';
 import fetch from 'node-fetch';
 
-describe('EOSIO DID Update', () => {
+describe('Antelope DID Update', () => {
   it('Update a DID', async () => {
     expect.assertions(3);
     const signatureProvider = new JsSignatureProvider([jungleTestKeys.private]);
@@ -27,13 +27,13 @@ describe('EOSIO DID Update', () => {
       ],
       waits: [],
     };
-    const eosioDID = new EosioDID({
+    const antelopeDID = new AntelopeDID({
       signatureProvider,
       chain: 'eos:testnet:jungle',
       fetch
     });
 
-    const didDoc = await eosioDID.update(jungleTestKeys.name, 'active2', 'owner', myKey);
+    const didDoc = await antelopeDID.update(jungleTestKeys.name, 'active2', 'owner', myKey);
     if (didDoc.didUpdateMetadata.error) {
       console.error(didDoc.didUpdateMetadata.error);
     }

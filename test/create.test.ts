@@ -1,4 +1,4 @@
-import EosioDID from '../src/index';
+import AntelopeDID from '../src/index';
 import { Authority } from '../src/types';
 import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';
 import fetch from 'node-fetch';
@@ -7,11 +7,11 @@ const jungleTestKeys = require('../jungleTestKeys.json');
 
 const NEW_ACCOUNT_NAME = 'eosdidt22113';
 
-describe('EOSIO DID class', () => {
+describe('Antelope DID class', () => {
   it('Create a Jungle DID', async () => {
     expect.assertions(2);
     const signatureProvider = new JsSignatureProvider([jungleTestKeys.private]);
-    const eosioDid = new EosioDID({
+    const antelopeDid = new AntelopeDID({
       chain: 'eos:testnet:jungle',
       signatureProvider,
       fetch
@@ -28,7 +28,7 @@ describe('EOSIO DID class', () => {
       waits: [],
     };
 
-    const didDoc = await eosioDid.create(jungleTestKeys.name, NEW_ACCOUNT_NAME, myKey, myKey);
+    const didDoc = await antelopeDid.create(jungleTestKeys.name, NEW_ACCOUNT_NAME, myKey, myKey);
     if (didDoc.didCreateMetadata.error) {
       console.error(didDoc.didCreateMetadata.error);
     }

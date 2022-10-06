@@ -15,7 +15,7 @@ export interface ChainRegistry {
   [x: string]: ChainData;
 }
 
-export interface EosioOptions extends FetchOptions {
+export interface AntelopeOptions extends FetchOptions {
   chain?: string;
   fetch?: any;
   signatureProvider?: SignatureProvider;
@@ -27,7 +27,7 @@ export interface EosioOptions extends FetchOptions {
   };
 }
 
-export interface CreateOptions extends Partial<EosioOptions> {
+export interface CreateOptions extends Partial<AntelopeOptions> {
   buyrambytes?: number;
   stakeNetQuantity?: string;
   stakeCpuQuantity?: string;

@@ -5,7 +5,7 @@ import resolve from './resolve';
 import {
   Authority,
   CreateOptions,
-  EosioOptions,
+  AntelopeOptions,
   ChainRegistry,
   DIDUpdateResult,
   DIDCreateResult,
@@ -13,23 +13,23 @@ import {
 } from './types';
 import {
   defaultCreateOptions,
-  defaultEosioOptions,
-} from './defaultEosioOptions';
+  defaultAntelopeOptions,
+} from './defaultAntelopeOptions';
 import { SignatureProvider } from 'eosjs/dist/eosjs-api-interfaces';
 import { DIDResolutionResult } from 'did-resolver';
 
-export default class EosioDID {
-  _options: EosioOptions;
+export default class AntelopeDID {
+  _options: AntelopeOptions;
 
-  constructor(options: EosioOptions) {
-    this._options = { ...defaultEosioOptions, ...options };
+  constructor(options: AntelopeOptions) {
+    this._options = { ...defaultAntelopeOptions, ...options };
   }
 
   get options() {
     return this._options;
   }
 
-  set options(options: EosioOptions) {
+  set options(options: AntelopeOptions) {
     this._options = options;
   }
 
@@ -49,12 +49,12 @@ export default class EosioDID {
 
   async resolve(
     did: string,
-    options?: EosioOptions
+    options?: AntelopeOptions
   ): Promise<DIDResolutionResult> {
     return await resolve(did, {
       ...this._options,
       ...options,
-    } as Required<EosioOptions>);
+    } as Required<AntelopeOptions>);
   }
 
   async update(
@@ -62,25 +62,25 @@ export default class EosioDID {
     permission: string,
     parent: string,
     auth: Authority,
-    options?: EosioOptions
+    options?: AntelopeOptions
   ): Promise<DIDUpdateResult> {
     return await update(account, permission, parent, auth, {
       ...this._options,
       ...options,
-    } as Required<EosioOptions>);
+    } as Required<AntelopeOptions>);
   }
 
-  async deactivate(did: string, options?: EosioOptions): Promise<DIDDeactivateResult> {
+  async deactivate(did: string, options?: AntelopeOptions): Promise<DIDDeactivateResult> {
     return await deactivate(did, {
       ...this._options,
       ...options,
-    } as Required<EosioOptions>)
+    } as Required<AntelopeOptions>)
   }
 }
 
 export {
   Authority,
-  EosioOptions,
+  AntelopeOptions,
   CreateOptions,
   ChainRegistry,
   SignatureProvider,

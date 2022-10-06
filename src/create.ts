@@ -1,5 +1,5 @@
 import { Resolver } from 'did-resolver';
-import { getResolver, eosioChainRegistry } from 'eosio-did-resolver';
+import { getResolver, eosioChainRegistry as antelopeChainRegistry } from 'eosio-did-resolver';
 import { Authority, CreateOptions, DIDCreateResult } from './types';
 import { JsonRpc, Api, RpcError } from 'eosjs';
 import { TextEncoder, TextDecoder } from 'util';
@@ -18,7 +18,7 @@ export default async function create(
   validateAccountName(name);
 
   const chainRegistry = {
-    ...eosioChainRegistry,
+    ...antelopeChainRegistry,
     ...options.registry,
   };
   const chainData = getChainData(chainRegistry, options.chain);

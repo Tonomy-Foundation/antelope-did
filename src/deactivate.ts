@@ -1,8 +1,8 @@
-import { DIDDeactivateResult, EosioOptions } from './types';
+import { DIDDeactivateResult, AntelopeOptions } from './types';
 
 export default async function deactivate(
   did: string,
-  options?: EosioOptions
+  options?: AntelopeOptions
 ): Promise<DIDDeactivateResult> {
-  throw Error('EOSIO DID deactivate not supported. If this EOSIO chain support deactivation of accounts, please override this function with the appropriate functionality');
+  throw Error('Antelope DID deactivate not supported. If this Antelope chain support deactivation of accounts, please override this function with the appropriate functionality');
 }
