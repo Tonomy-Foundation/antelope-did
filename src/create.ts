@@ -80,7 +80,7 @@ export default async function create(
       );
 
       // fetch DIDDocument
-      const did = `did:eosio:${options.chain}:${name}`;
+      const did = `did:antelope:${options.chain}:${name}`;
       const didResult = await resolver.resolve(did, { ...options });
       const { error } = didResult.didResolutionMetadata;
       if (error) {
