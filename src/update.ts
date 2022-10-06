@@ -1,4 +1,4 @@
-import { getResolver, eosioChainRegistry as antelopeChainRegistry } from 'eosio-did-resolver';
+import { getResolver, antelopeChainRegistry } from 'antelope-did-resolver';
 import { Api, JsonRpc, RpcError } from 'eosjs';
 import { Authority, DIDUpdateResult, AntelopeOptions } from './types';
 import { getChainData, validateAccountName } from './util';
@@ -57,7 +57,7 @@ export default async function update(
       );
 
       // fetch DIDDocument
-      const did = `did:eosio:${options.chain}:${account}`;
+      const did = `did:antelope:${options.chain}:${account}`;
       const didResult = await resolver.resolve(did, { ...options });
       const { error } = didResult.didResolutionMetadata;
       if (error) {

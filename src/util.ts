@@ -2,7 +2,7 @@ import {
   REGEX_ACCOUNT_NAME,
   REGEX_CHAIN_ID,
   REGEX_CHAIN_NAME,
-} from 'eosio-did-resolver';
+} from 'antelope-did-resolver';
 import { ChainData, ChainRegistry } from './types';
 
 export function getChainData(

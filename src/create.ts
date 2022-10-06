@@ -1,5 +1,5 @@
 import { Resolver } from 'did-resolver';
-import { getResolver, eosioChainRegistry as antelopeChainRegistry } from 'eosio-did-resolver';
+import { getResolver, antelopeChainRegistry } from 'antelope-did-resolver';
 import { Authority, CreateOptions, DIDCreateResult } from './types';
 import { JsonRpc, Api, RpcError } from 'eosjs';
 import { TextEncoder, TextDecoder } from 'util';
