@@ -8,13 +8,12 @@ describe('Antelope DID Deactivate', () => {
     expect.assertions(1);
     const signatureProvider = new JsSignatureProvider([jungleTestKeys.private]);
     const antelopeDID = new AntelopeDID({
-      account: jungleTestKeys.name,
       signatureProvider,
       chain: 'eos:testnet:jungle',
       fetch,
     });
 
-    const did = `did:antelope:eos:testnet:jungle:${jungleTestKeys.name}`;
+    const did = `did:eosio:eos:testnet:jungle:${jungleTestKeys.name}`;
     try {
       await antelopeDID.deactivate(did);
     } catch (e) {
