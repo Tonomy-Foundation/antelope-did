@@ -17,6 +17,12 @@ import {
 } from './defaultAntelopeOptions';
 import { SignatureProvider } from 'eosjs/dist/eosjs-api-interfaces';
 import { DIDResolutionResult } from 'did-resolver';
+import {
+  createDIDDocument,
+  antelopeChainRegistry,
+  checkDID,
+  fetchAccount,
+} from 'antelope-did-resolver';
 
 export default class AntelopeDID {
   _options: AntelopeOptions;
@@ -70,11 +76,14 @@ export default class AntelopeDID {
     } as Required<AntelopeOptions>);
   }
 
-  async deactivate(did: string, options?: AntelopeOptions): Promise<DIDDeactivateResult> {
+  async deactivate(
+    did: string,
+    options?: AntelopeOptions
+  ): Promise<DIDDeactivateResult> {
     return await deactivate(did, {
       ...this._options,
       ...options,
-    } as Required<AntelopeOptions>)
+    } as Required<AntelopeOptions>);
   }
 }
 
@@ -84,4 +93,8 @@ export {
   CreateOptions,
   ChainRegistry,
   SignatureProvider,
+  createDIDDocument,
+  antelopeChainRegistry,
+  checkDID,
+  fetchAccount,
 };

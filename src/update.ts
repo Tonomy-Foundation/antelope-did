@@ -5,7 +5,7 @@ import { getChainData, validateAccountName } from './util';
 import { TextDecoder, TextEncoder } from 'util';
 import { Resolver } from 'did-resolver';
 
-const resolver = new Resolver(getResolver());
+const resolver = new Resolver(getResolver() as any);
 
 export default async function update(
   account: string,

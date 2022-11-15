@@ -8,12 +8,13 @@ describe('Antelope DID Resolve', () => {
     expect.assertions(1);
     const antelopeDid = new AntelopeDID({ fetch });
 
-    const did = `did:antelope:eos:testnet:jungle:${jungleTestKeys.name}`;
+    const did = `did:eosio:eos:testnet:jungle:${jungleTestKeys.name}`;
     const didDoc = await antelopeDid.resolve(did);
     if (didDoc.didResolutionMetadata.error) {
       console.error(didDoc.didResolutionMetadata.error);
     }
 
     expect(didDoc.didDocument).toBeDefined();
+    console.log(didDoc)
   });
 });

@@ -5,7 +5,7 @@ import { JsonRpc, Api, RpcError } from 'eosjs';
 import { TextEncoder, TextDecoder } from 'util';
 import { getChainData, validateAccountName } from './util';
 
-const resolver = new Resolver(getResolver());
+const resolver = new Resolver(getResolver() as any);
 
 export default async function create(
   creator: string,
