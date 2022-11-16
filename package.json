@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "antelope-did-resolver": "file:../antelope-did-resolver",
-    "did-resolver": "^3.1.0",
+    "did-resolver": "file:../did-resolver",
     "eosjs": "^22.0.0",
     "node-fetch": "^2.6.1"
   }
