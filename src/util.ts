@@ -2,7 +2,7 @@ import {
   REGEX_ACCOUNT_NAME,
   REGEX_CHAIN_ID,
   REGEX_CHAIN_NAME,
-} from 'antelope-did-resolver';
+} from '@tonomy/antelope-did-resolver';
 import { ChainData, ChainRegistry } from './types';
 
 export function getChainData(

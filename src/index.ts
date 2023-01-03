@@ -16,13 +16,13 @@ import {
   defaultAntelopeOptions,
 } from './defaultAntelopeOptions';
 import { SignatureProvider } from 'eosjs/dist/eosjs-api-interfaces';
-import { DIDResolutionResult } from 'did-resolver';
+import { DIDResolutionResult } from '@tonomy/did-resolver';
 import {
   createDIDDocument,
   antelopeChainRegistry,
   checkDID,
   fetchAccount,
-} from 'antelope-did-resolver';
+} from '@tonomy/antelope-did-resolver';
 
 export default class AntelopeDID {
   _options: AntelopeOptions;

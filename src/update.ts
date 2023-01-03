@@ -1,9 +1,9 @@
-import { getResolver, antelopeChainRegistry } from 'antelope-did-resolver';
+import { getResolver, antelopeChainRegistry } from '@tonomy/antelope-did-resolver';
 import { Api, JsonRpc, RpcError } from 'eosjs';
 import { Authority, DIDUpdateResult, AntelopeOptions } from './types';
 import { getChainData, validateAccountName } from './util';
 import { TextDecoder, TextEncoder } from 'util';
-import { Resolver } from 'did-resolver';
+import { Resolver } from '@tonomy/did-resolver';
 
 const resolver = new Resolver(getResolver() as any);
 

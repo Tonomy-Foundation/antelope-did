@@ -1,5 +1,5 @@
-import { Resolver } from 'did-resolver';
-import { getResolver, antelopeChainRegistry } from 'antelope-did-resolver';
+import { Resolver } from '@tonomy/did-resolver';
+import { getResolver, antelopeChainRegistry } from '@tonomy/antelope-did-resolver';
 import { Authority, CreateOptions, DIDCreateResult } from './types';
 import { JsonRpc, Api, RpcError } from 'eosjs';
 import { TextEncoder, TextDecoder } from 'util';

@@ -1,5 +1,5 @@
 {
-  "name": "antelope-did",
+  "name": "@tonomy/antelope-did",
   "author": "Jack Tanner <jack@gimly.io>",
   "version": "0.1.2",
   "license": "Apache-2.0",
@@ -9,6 +9,9 @@
     "did",
     "ssi"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com/Tonomy-Foundation/antelope-did.git"
@@ -63,8 +66,8 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
-    "antelope-did-resolver": "file:../antelope-did-resolver",
-    "did-resolver": "file:../did-resolver",
+    "@tonomy/antelope-did-resolver": "^0.1.7",
+    "@tonomy/did-resolver": "^4.0.4",
     "eosjs": "^22.0.0",
     "node-fetch": "^2.6.1"
   }

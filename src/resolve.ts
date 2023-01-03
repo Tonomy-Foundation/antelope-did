@@ -1,5 +1,5 @@
-import { DIDResolutionResult, Resolver } from 'did-resolver';
-import { getResolver } from 'antelope-did-resolver';
+import { DIDResolutionResult, Resolver } from '@tonomy/did-resolver';
+import { getResolver } from '@tonomy/antelope-did-resolver';
 import { AntelopeOptions } from './types';
 
 const resolver = new Resolver(getResolver() as any);

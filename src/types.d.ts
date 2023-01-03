@@ -1,4 +1,4 @@
-import { DIDDocument } from 'did-resolver';
+import { DIDDocument } from '@tonomy/did-resolver';
 import { RpcError } from 'eosjs';
 import { SignatureProvider, TransactResult } from 'eosjs/dist/eosjs-api-interfaces';
 
